@@ -1,10 +1,10 @@
 package dumbassLoop
 
-import(
-"fmt"
+import (
+	"fmt"
 )
 
-func main(){
+func main() {
  	fmt.Println("Hello World")
 	fmt.Println("Hello World")
 	fmt.Println("Hello World")
@@ -14,6 +14,5 @@ func main(){
 	fmt.Println("Hello World")
 	fmt.Println("Hello World")
 	fmt.Println("Hello World")
-	fmt.Println("Hello World")
-	fmt.Println("Hello World")
+	fmt.Println("Hello World") 
 }

@@ -17,13 +17,12 @@ func newFile() *os.File {
 }
 
 func startGoFile(file *os.File) {
-	startGoFile := "package dumbassLoop\n\nimport(\n\"fmt\"\n)\n\n"
+	startGoFile := "package dumbassLoop\n\nimport (\n\t\"fmt\"\n)\n\n"
 	file.WriteString(startGoFile)
 }
 
 func fileNewMainFunction(file *os.File, text string) {
-	newFunc := fmt.Sprintln("func main(){\n", text)
-	newFunc += "}"
+	newFunc := fmt.Sprintln("func main() {\n", text, "\n}")
 	file.WriteString(newFunc)
 }
 
@@ -41,7 +40,7 @@ func main() {
 	startGoFile(file)
 	howManyTimes := 10
 	var newFunc string
-	newFunc = dumbAssLoop(0, howManyTimes, newFunc)
+	newFunc = dumbAssLoop(1, howManyTimes, newFunc)
 	fileNewMainFunction(file, newFunc)
 	file.Close()
 }
